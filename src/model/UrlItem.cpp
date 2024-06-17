@@ -4,7 +4,7 @@ namespace dochkas {
     namespace linkholder {
         UrlItem::UrlItem(uint64_t id) : id(id) {
             this->stat.setId(getUrlStatisticsSeqNumber());
-            this->stat.setLastUpdated(boost::posix_time::microsec_clock::local_time());
+            this->stat.setLastUpdated(getNow());
         }
 
         uint64_t UrlItem::getId() {
@@ -29,6 +29,18 @@ namespace dochkas {
 
         void UrlItem::setDescription(std::string description) {
             this->description = description;
+        }
+
+        void UrlItem::addTag(UrlTag* tag) {
+            this->tags[tag->getId()] = tag;
+        }
+
+        std::map<uint64_t, UrlTag*> UrlItem::getTags() {
+            return this->tags;
+        }
+
+        UrlStatistics& UrlItem::getStatistics() {
+            return this->stat;
         }
     }
 }

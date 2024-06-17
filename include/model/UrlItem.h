@@ -34,6 +34,12 @@ namespace dochkas {
             std::string getDescription();
 
             void setDescription(std::string description);
+
+            void addTag(UrlTag* tag);
+
+            std::map<uint64_t, UrlTag*> getTags();
+
+            UrlStatistics& getStatistics();
         };
     }
 }

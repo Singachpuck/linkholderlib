@@ -2,6 +2,11 @@
 #define LINKHOLDER_HELPER_H
 
 #include <cstdint>
+#include <map>
+#include <string>
+#include <boost/date_time/posix_time/posix_time.hpp>
+
+#include "model/UrlTag.h"
 
 namespace dochkas {
     namespace linkholder {
@@ -13,7 +18,11 @@ namespace dochkas {
         uint64_t getUrlItemSeqNumber();
 
         uint64_t getUrlStatisticsSeqNumber();
-    }
+
+        std::string urlTagsToString(std::map<uint64_t, UrlTag*> map);
+
+        boost::posix_time::ptime getNow();
+    }   
 }
 
 #endif

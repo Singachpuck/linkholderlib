@@ -10,24 +10,46 @@ int main(int argc, char const *argv[])
 {
     UrlTag tag1;
     tag1.setId(1);
-    tag1.setName("Media");
+    tag1.setName("Google");
 
     UrlTag tag2;
-    tag1.setId(2);
-    tag1.setName("Ansys");
+    tag2.setId(2);
+    tag2.setName("IT");
+
+    UrlTag tag3;
+    tag3.setId(3);
+    tag3.setName("Important");
 
     UrlAppManager manager("Url Manager");
     manager.addTag(tag1);
     manager.addTag(tag2);
+    manager.addTag(tag3);
 
-    manager.registerUrl("https://www.google.com/", "First Link.");
+    manager.registerUrl("https://www.google.com/", "Google.", {1});
+    manager.registerUrl("https://github.com/", "GitHub.", {1, 2});
 
-    std::map<uint64_t, UrlItem>* urls = manager.getUrls();
+    // manager.printInfo();
 
-    std::cout << "Added the following UrlItem: " << std::endl;
-    std::cout << "Id: " << urls->at(0).getId() << std::endl;
-    std::cout << "Address: " << urls->at(0).getAddr() << std::endl;
-    std::cout << "Description: " << urls->at(0).getDescription() << std::endl;
+    std::cout << "------------------------" << std::endl;
+
+    UrlItem item1{0};
+    item1.setAddr("https://en.cppreference.com/");
+    item1.setDescription("C++ reference.");
+    item1.addTag(&tag2);
+    item1.addTag(&tag3);
+    manager.updateUrl(item1);
+
+    UrlItem item2 = manager.getUrl(1);
+    item2.addTag(&tag1);
+    item2.addTag(&tag3);
+    manager.updateUrl(item2);
     
+    manager.printInfo();
+
+    manager.openLink(0);
+    manager.openLink(1);
+
+    manager.printInfo();
+
     return 0;
 }
