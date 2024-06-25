@@ -1,0 +1,1 @@
+target_sources(${LIBRARY_NAME} PUBLIC UrlItem.cpp UrlStatistics.cpp UrlTag.cpp)

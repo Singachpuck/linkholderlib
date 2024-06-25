@@ -1,0 +1,3 @@
+set(RELATIVE_PATH ${RELATIVE_PATH}/service)
+
+install(FILES helper.h DESTINATION ${RELATIVE_PATH})

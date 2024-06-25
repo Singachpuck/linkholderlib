@@ -7,7 +7,7 @@
 
 #include "UrlTag.h"
 #include "UrlStatistics.h"
-#include "service/helper.h"
+#include "linkholder/service/helper.h"
 
 namespace dochkas {
     namespace linkholder {

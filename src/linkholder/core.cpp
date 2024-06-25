@@ -1,7 +1,7 @@
 #include <sstream>
 #include <boost/format.hpp>
 
-#include "core.h"
+#include "linkholder/core.h"
 
 namespace dochkas {
     namespace linkholder {

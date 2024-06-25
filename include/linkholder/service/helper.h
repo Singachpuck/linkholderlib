@@ -6,7 +6,7 @@
 #include <string>
 #include <boost/date_time/posix_time/posix_time.hpp>
 
-#include "model/UrlTag.h"
+#include "linkholder/model/UrlTag.h"
 
 namespace dochkas {
     namespace linkholder {

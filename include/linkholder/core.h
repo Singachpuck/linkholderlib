@@ -5,8 +5,8 @@
 #include <string>
 #include <map>
 
-#include "model/UrlItem.h"
-#include "service/helper.h"
+#include "linkholder/model/UrlItem.h"
+#include "linkholder/service/helper.h"
 
 namespace dochkas {
     namespace linkholder {

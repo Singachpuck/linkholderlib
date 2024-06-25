@@ -2,7 +2,7 @@ from conan import ConanFile
 from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout, CMakeDeps
 
 
-class helloRecipe(ConanFile):
+class LinkHolderRecipe(ConanFile):
     name = "linkholderlib"
     version = "1.0"
 

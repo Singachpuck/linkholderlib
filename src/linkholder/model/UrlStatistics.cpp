@@ -1,4 +1,4 @@
-#include "model/UrlStatistics.h"
+#include "linkholder/model/UrlStatistics.h"
 
 namespace dochkas {
     namespace linkholder {

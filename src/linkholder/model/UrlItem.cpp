@@ -1,4 +1,4 @@
-#include "model/UrlItem.h"
+#include "linkholder/model/UrlItem.h"
 
 namespace dochkas {
     namespace linkholder {
